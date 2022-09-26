@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class PowerOf2
+    public class HarmonicNumber
     {
-        public static void Power()
+          static void Main(string[] args)
+        
         {
-            int n = 0;
-            Console.WriteLine("Enter Power value N");
-            n = Convert.ToInt32(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
+            int N = 0;
+            Console.WriteLine("Enter N-th Harmonic Number");
+            N = Convert.ToInt32(Console.ReadLine());
+            double harmonic = 1;
+
+            for (int i = 2; i <= N; i++)
             {
-                Console.WriteLine(2 * i);
+                harmonic += (double)1 / i;//Applying Formula to get Harmonic
             }
+            Console.WriteLine(harmonic);
+            Console.ReadLine();
         }
     }
 }
