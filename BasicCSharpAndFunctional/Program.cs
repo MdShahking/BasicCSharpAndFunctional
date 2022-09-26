@@ -6,21 +6,47 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class EvenOdd
+    public class VowelConsonant
     {
         static void Main(string[] args)
         {
-            int a = 0;
-            Console.WriteLine("Enter Number to check Even or Odd");
-            a = Convert.ToInt32(Console.ReadLine());
+            char ch;
+            Console.WriteLine("Enter any Alphabet to check Vowel or Consonant");
+            ch = Convert.ToChar(Console.ReadLine().ToLower());
 
+            bool a = char.IsDigit(ch);
 
-            if (a % 2 == 0)
-                Console.WriteLine("{0} is Even", a);
-           
+            if (a)
+                Console.WriteLine("Entered Number");
             else
-                Console.WriteLine("{0} is Odd", a);
-            Console.ReadLine();
+            {
+                switch (ch)
+                {
+                    case 'a':
+                        Console.WriteLine("It is Vowel");
+                        break;
+                    case 'e':
+                        Console.WriteLine("It is Vowel");
+                        break;
+                    case 'i':
+                        Console.WriteLine("It is Vowel");
+                        break;
+                    case 'o':
+                        Console.WriteLine("It is Vowel");
+                        break;
+                    case 'u':
+                        Console.WriteLine("It is Vowel");
+                        break;
+                    default:
+                        Console.WriteLine("It is Consonant");
+                        break;
+                        
+                }
+                Console.ReadLine();
+            }
+
+
+
         }
     }
 }
