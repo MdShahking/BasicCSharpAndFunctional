@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class QuotientReminder
+    public class SwapNumbers
     {
         static void Main(string[] args)
         {
-            int Divident = 0, Divisor = 0, Quotient = 0, Reminder = 0;
-            Console.WriteLine("Enter Divident and Divisor");
-            Console.Write("Divident: ");
-            Divident = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Divisor: ");
-            Divisor = Convert.ToInt32(Console.ReadLine());
+            int temp = 0;
+            int a = 0, b = 0;
+            Console.WriteLine("Enter Two Numbers: ");
+            Console.Write("a: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("b: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Before Swapping a= {0} b= {1}", a, b);
+            temp = a;
+            a = b;
+            b = temp;
 
-            Quotient = Divident / Divisor;
-            Reminder = Divident % Divisor;
-
-            Console.WriteLine("Quotoent: {0}", Quotient);
-            Console.WriteLine("Reminder: {0}", Reminder);
+            Console.WriteLine("After Swapping a= {0} b= {1}", a, b);
             Console.ReadLine();
         }
     }
