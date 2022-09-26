@@ -6,25 +6,16 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class LeapYear
+    public class PowerOf2
     {
-        public static void Leap()
+        public static void Power()
         {
-            string n;
-            int Year = 0;
-            Console.WriteLine("Enter Year");
-            n = Console.ReadLine();
-            if (n.Trim().Length == 4)
+            int n = 0;
+            Console.WriteLine("Enter Power value N");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
             {
-                Year = Convert.ToInt32(n);
-                if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
-                    Console.WriteLine("{0} is a Leap Year.", Year);
-                else
-                    Console.WriteLine("{0} is not a Leap Year.", Year);
-            }
-            else
-            {
-                Console.WriteLine("Enter only 4 digit");
+                Console.WriteLine(2 * i);
             }
         }
     }
