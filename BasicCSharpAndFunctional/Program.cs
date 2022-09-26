@@ -6,47 +6,26 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class VowelConsonant
+    public class LargestAmongThree
     {
         static void Main(string[] args)
         {
-            char ch;
-            Console.WriteLine("Enter any Alphabet to check Vowel or Consonant");
-            ch = Convert.ToChar(Console.ReadLine().ToLower());
+            int a = 0, b = 0, c = 0;
+            Console.WriteLine("Enter Three Numbers to check Largest");
+            Console.Write("First: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Second: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Third: ");
+            c = Convert.ToInt32(Console.ReadLine());
 
-            bool a = char.IsDigit(ch);
-
-            if (a)
-                Console.WriteLine("Entered Number");
-            else
-            {
-                switch (ch)
-                {
-                    case 'a':
-                        Console.WriteLine("It is Vowel");
-                        break;
-                    case 'e':
-                        Console.WriteLine("It is Vowel");
-                        break;
-                    case 'i':
-                        Console.WriteLine("It is Vowel");
-                        break;
-                    case 'o':
-                        Console.WriteLine("It is Vowel");
-                        break;
-                    case 'u':
-                        Console.WriteLine("It is Vowel");
-                        break;
-                    default:
-                        Console.WriteLine("It is Consonant");
-                        break;
-                        
-                }
-                Console.ReadLine();
-            }
-
-
-
+            if (a > b && a > c)
+                Console.WriteLine("{0} is Largest", a);
+            else if (b > a && b > c)
+                Console.WriteLine("{0} is Largest", b);
+            else if (c > a && c > b)
+                Console.WriteLine("{0} is Largest", c);
+            Console.ReadLine();
         }
     }
 }
