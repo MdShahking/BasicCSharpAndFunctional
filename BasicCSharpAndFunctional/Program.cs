@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class SwapNumbers
+    public class EvenOdd
     {
         static void Main(string[] args)
         {
-            int temp = 0;
-            int a = 0, b = 0;
-            Console.WriteLine("Enter Two Numbers: ");
-            Console.Write("a: ");
+            int a = 0;
+            Console.WriteLine("Enter Number to check Even or Odd");
             a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("b: ");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Before Swapping a= {0} b= {1}", a, b);
-            temp = a;
-            a = b;
-            b = temp;
 
-            Console.WriteLine("After Swapping a= {0} b= {1}", a, b);
+
+            if (a % 2 == 0)
+                Console.WriteLine("{0} is Even", a);
+           
+            else
+                Console.WriteLine("{0} is Odd", a);
             Console.ReadLine();
         }
     }
