@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class HarmonicNumber
+    public class QuotientReminder
     {
-          static void Main(string[] args)
-        
+        static void Main(string[] args)
         {
-            int N = 0;
-            Console.WriteLine("Enter N-th Harmonic Number");
-            N = Convert.ToInt32(Console.ReadLine());
-            double harmonic = 1;
+            int Divident = 0, Divisor = 0, Quotient = 0, Reminder = 0;
+            Console.WriteLine("Enter Divident and Divisor");
+            Console.Write("Divident: ");
+            Divident = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Divisor: ");
+            Divisor = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 2; i <= N; i++)
-            {
-                harmonic += (double)1 / i;//Applying Formula to get Harmonic
-            }
-            Console.WriteLine(harmonic);
+            Quotient = Divident / Divisor;
+            Reminder = Divident % Divisor;
+
+            Console.WriteLine("Quotoent: {0}", Quotient);
+            Console.WriteLine("Reminder: {0}", Reminder);
             Console.ReadLine();
         }
     }
