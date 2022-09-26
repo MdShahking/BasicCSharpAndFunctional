@@ -6,34 +6,26 @@ using System.Threading.Tasks;
 
 namespace BasicCsharpandFunctional
 {
-    public class FlipCoin
+    public class LeapYear
     {
-        public static void Flip()
+        public static void Leap()
         {
-            Random random = new Random();
-
-
-            int n = 0, count1 = 0, count2 = 0;
-            double perH = 0, perT = 0;
-            Console.WriteLine("Enter how many times Coin will Flip");
-            n = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            string n;
+            int Year = 0;
+            Console.WriteLine("Enter Year");
+            n = Console.ReadLine();
+            if (n.Trim().Length == 4)
             {
-                int r = random.Next(0, 2);
-                if (r < 0.5)
-                {
-                    count1++;
-                }
+                Year = Convert.ToInt32(n);
+                if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+                    Console.WriteLine("{0} is a Leap Year.", Year);
                 else
-                {
-                    count2++;
-                }
+                    Console.WriteLine("{0} is not a Leap Year.", Year);
             }
-            perH = (count1 * 100) / n;
-            perT = (count2 * 100) / n;
-            Console.WriteLine("Percentage of Heads: {0}%  and Percentage of Tails: {1}%", perH, perT);
-
+            else
+            {
+                Console.WriteLine("Enter only 4 digit");
+            }
         }
-
     }
 }
